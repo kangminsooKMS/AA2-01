@@ -17,30 +17,30 @@
     //     line: { color: "#80CAF6" },
     //   };
     //   data = [trace];
-      Plotly.newPlot("graph", [
+      Plotly.newPlot("graph",[
           {
-        y: [1, 2, 3].map(rand),
-        mode: "lines",
-        line: { color: "#80CAF6" },
+            y: [1, 2, 3].map(rand),
+            mode: "lines",
+            line: { color: "#80CAF6" },
           },
-      {
-        y: [1, 2, 3].map(rand),
-        mode: "lines",
-        line: { color: "#DF56F1" },
-      },
-      {
-        y: [1, 2, 3].map(rand),
-        mode: "lines",
-        line: { color: "#00FF00" },
-      },
-    ]);
+          {
+            y: [1, 2, 3].map(rand),
+            mode: "lines",
+            line: { color: "#DF56F1" },
+          },
+          {
+            y: [1, 2, 3].map(rand),
+            mode: "lines",
+            line: { color: "#00FF00" },
+          },
+      ]);
 
       var cnt = 0;
 		var interval = setInterval(function() {
-            Plotly.extendTraces('graph', {
-                y :[[rand()], [rand()], [rand()]]
-            },[0,1,2])
 			cnt++;
+			Plotly.extendTraces('graph', {
+				y: [[rand()],[rand()],[rand()]]
+			}, [0,1,2]);
 			if(cnt == 100) clearInterval(interval);
 		}, 300);
     </script>

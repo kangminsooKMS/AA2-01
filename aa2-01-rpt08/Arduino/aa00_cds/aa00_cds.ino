@@ -1,5 +1,5 @@
 //  lux
-#define CDS_INPUT 0
+#define CDS_INPUT 1
 
 void setup() {
 Serial.begin(9600);

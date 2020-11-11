@@ -17,20 +17,22 @@
     //     line: { color: "#80CAF6" },
     //   };
     //   data = [trace];
-      Plotly.newPlot("graph", [{
-        y: [1, 2, 3].map(rand),
-        mode: "lines",
-        line: { color: "#80CAF6" },
-      }]);
+      Plotly.newPlot("graph",[
+          {
+            y: [1, 2, 3].map(rand),
+          mode: "lines",
+          line: { color: "#80CAF6" },
+          }
+      ]);
 
-      /*var cnt = 0;
-		var interval = setInterval(function() {
-			cnt++;
-			Plotly.extendTraces('graph', {
-				y: [[rand()]]
-			}, [0]);
-			if(cnt == 30) clearInterval(interval);
-		}, 2000);*/
+    //   var cnt = 0;
+	// 	var interval = setInterval(function() {
+	// 		cnt++;
+	// 		Plotly.extendTraces('graph', {
+	// 			y: [[rand()]]
+	// 		}, [0]);
+	// 		if(cnt == 30) clearInterval(interval);
+	// 	}, 2000);
     </script>
   </body>
 </html>

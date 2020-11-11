@@ -11,28 +11,22 @@
       function rand() {
         return Math.random();
       }
-    //   trace = {
-    //     y: [1, 2, 3].map(rand),
-    //     mode: "lines",
-    //     line: { color: "#80CAF6" },
-    //   };
-    //   data = [trace];
-      Plotly.newPlot("graph",[
-          {
-            y: [1, 2, 3].map(rand),
-            mode: "lines",
-            line: { color: "#80CAF6" },
-          }
-      ]);
+      trace = {
+        y: [1, 2, 3].map(rand),
+        mode: "lines",
+        line: { color: "#80CAF6" },
+      };
+      data = [trace];
+      Plotly.newPlot("graph", data);
 
-      var cnt = 0;
+      /*var cnt = 0;
 		var interval = setInterval(function() {
 			cnt++;
 			Plotly.extendTraces('graph', {
 				y: [[rand()]]
 			}, [0]);
-			if(cnt == 100) clearInterval(interval);
-		}, 200);
+			if(cnt == 30) clearInterval(interval);
+		}, 2000);*/
     </script>
   </body>
 </html>
