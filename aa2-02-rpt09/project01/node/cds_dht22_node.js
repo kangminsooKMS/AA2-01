@@ -36,10 +36,12 @@ parser.on("data", (data) => {
   // call back when data is received
   readData = data.toString();
   firstcommaidx = readData.indexOf(",");
+  secondcommaidx = readData.indexOf(",",firstcommaidx+1);
+  thirdcommaidx = readData.lastIndexOf(",");
   if (readData.lastIndexOf(",")>firstcommaidx && firstcommaidx > 0) {
-    temp = readData.substring(firstcommaidx+1,readData.indexOf(",",firstcommaidx+1));
-    humi = readData.substring(readData.indexOf(",",firstcommaidx+1)+1,readData.lastIndexOf(","));
-    lux = readData.substring(readData.lastIndexOf(",")+1);
+    temp = readData.substring(firstcommaidx+1,secondcommaidx);
+    humi = readData.substring(secondcommaidx+1,thirdcommaidx);
+    lux = readData.substring(thirdcommaidx+1);
     readData = "";
 
     dStr = getDateString();
